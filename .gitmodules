@@ -1,0 +1,6 @@
+[submodule "OLab45-Api"]
+	path = OLab45-Api
+	url = git@github.com:olab/OLab45-Api.git
+[submodule "OLab45-Common"]
+	path = OLab45-Common
+	url = git@github.com:olab/OLab45-Common.git
