@@ -1,4 +1,4 @@
-# OLab 4.6 API Docker Project
+# OLab 4.5 API Docker Project
 
 This project combines both [`OLab45-Api`](https://github.com/olab/OLab45-Api) and [`OLab45-Common`](https://github.com/olab/OLab45-Common) and is intended to streamline the development process of OLab 4.5 API, also suitable for production deployments.
 
