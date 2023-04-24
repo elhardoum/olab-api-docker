@@ -9,7 +9,12 @@ This project combines both [`OLab45-Api`](https://github.com/olab/OLab45-Api) an
 
 ### Usage
 
-After cloning the repo, copy `.env.sample` to `.env` and make any changes. You can then run the containers via the command:
+After cloning the repo, copy:
+
+1. `.env.sample` to `.env`
+2. `appsettings.sample.json` to `appsettings.json`
+
+and make any changes. You can then run the containers via the command:
 
 ```sh
 docker compose up -d
