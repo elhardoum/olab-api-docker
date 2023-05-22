@@ -2,6 +2,10 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0
 
 WORKDIR /usr/src/app
 
+# install dependencies for migrations
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+
 # add project files
 COPY OLab45-Api Api
 COPY OLab45-Common Common

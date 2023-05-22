@@ -5,7 +5,7 @@ This project combines both [`OLab45-Api`](https://github.com/olab/OLab45-Api) an
 ### Prerequisites
 
 - [Docker engine](https://docs.docker.com/engine/install/)
-- docker-compose installed separately in case engine doesn't come with the `compose` command (older versions)
+- `docker-compose` installed separately in case engine doesn't come with the `compose` command (older versions)
 
 ### Usage
 
@@ -30,8 +30,18 @@ git submodule foreach git pull
 git submodule foreach git pull origin main
 ```
 
-To install any updates fetched from the previous step, you can use `docker compose build --no-cache`
+To rebuild the API service in case you have updates, run `docker compose build --no-cache`
 
 ### Migrations
 
-This is a required step for the API service to work, it needs support from the project author. Either create an issue at `olab/OLab45-Common` or try hacking something with `dotnet ef` or a direct migration call attached to the application `Startup.cs`. DB models can be found at `OLab45-Common/Data`
+To run the initial database setup, connect to your container and generate then execute a migration script:
+
+```sh
+# ssh into the container
+docker-compose run --rm --entrypoint=/bin/sh olab-api
+
+# run the following commands and exit
+cd /usr/src/app/Common/Data
+dotnet ef --startup-project ./../../Api/WebApiService migrations add Initial -c OLabDBContext
+dotnet ef --startup-project ./../../Api/WebApiService database update -c OLabDBContext
+```
