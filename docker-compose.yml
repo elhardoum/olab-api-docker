@@ -8,9 +8,9 @@ services:
     ports:
       - ${HTTP_PORT}:80
     volumes:
-      - ./OLab45-Api:/usr/src/app/Api
+      - ./Api:/usr/src/app/Api
       - ./appsettings.json:/usr/src/app/Api/WebApiService/appsettings.json
-      - ./OLab45-Common:/usr/src/app/Common
+      - ./Common:/usr/src/app/Common
     env_file: .env
     depends_on:
       - mariadb

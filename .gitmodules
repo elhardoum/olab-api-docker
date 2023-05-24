@@ -1,6 +1,6 @@
 [submodule "OLab45-Api"]
-	path = OLab45-Api
+	path = Api
 	url = git@github.com:elhardoum/OLab45-Api.git
 [submodule "OLab45-Common"]
-	path = OLab45-Common
+	path = Common
 	url = git@github.com:elhardoum/OLab45-Common.git
