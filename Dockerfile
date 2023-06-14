@@ -7,8 +7,8 @@ RUN dotnet tool install --global dotnet-ef
 ENV PATH="$PATH:/root/.dotnet/tools"
 
 # add project files
-COPY OLab45-Api Api
-COPY OLab45-Common Common
+COPY Api Api
+COPY Common Common
 
 # build folder
 RUN mkdir -p /opt/olab46/api
